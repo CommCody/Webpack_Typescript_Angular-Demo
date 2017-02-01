@@ -9,6 +9,9 @@
   "author": "Joris Goovaerts",
   "license": "ISC",
   "devDependencies": {
+    "@types/lodash": "^4.14.52",
+    "ts-loader": "^2.0.0",
+    "typescript": "^2.1.5",
     "webpack": "^2.2.1"
   },
   "dependencies": {
