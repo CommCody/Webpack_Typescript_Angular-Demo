@@ -3,7 +3,9 @@
   "version": "0.0.1",
   "description": "testing webpack2 angular2 and typescript2 in combo",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "build": "webpack"
+  },
   "author": "Joris Goovaerts",
   "license": "ISC",
   "devDependencies": {
