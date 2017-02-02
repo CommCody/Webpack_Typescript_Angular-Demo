@@ -1,5 +1,6 @@
 import Messages from './messages';
 import './index.css';
+import './index.scss';
 
 module As {
 
@@ -7,6 +8,7 @@ module As {
     var element = document.createElement('div');
     element.appendChild(getElement('', Messages.getStandardMessage()))
     element.appendChild(getElement('hello css', Messages.getCssMessage()))
+    element.appendChild(getElement('hello sass', Messages.getSassMessage()))
     return element;
   }
 
