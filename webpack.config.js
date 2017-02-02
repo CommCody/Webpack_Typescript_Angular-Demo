@@ -1,3 +1,5 @@
+'use strict';
+
 var path = require('path');
 
 module.exports = {
@@ -10,12 +12,43 @@ module.exports = {
       rules: [
           {
               test: /\.tsx?$/,
-              loader: 'ts-loader',
               exclude: /node_modules/,
+              use: [
+                  {
+                    loader:'babel-loader',
+                    options:{
+                        presets:[ 'es2016', 'es2015' ]
+                    }
+                  },
+                  'ts-loader'
+              ],
+          },
+          {
+              test: /\.js$/,
+              exclude: /node_modules/,
+              use: [
+                  {
+                    loader: 'babel-loader',
+                    options: {
+                        presets: [ 'es2016', 'es2015' ]
+                    }
+                  }
+              ]
+          },
+          {
+              test: /\.css$/,
+              exclude: /node_modules/,
+              use: [{
+                  loader: 'style-loader'
+                },
+                {
+                  loader: 'css-loader'
+                }
+              ]
           },
       ]
   },
   resolve: {
-      extensions: ['.tsx', '.ts', '.js']
+      extensions: ['.ts', '.tsx', '.js']
   }
 };

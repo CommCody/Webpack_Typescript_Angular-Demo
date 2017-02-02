@@ -1,13 +1,19 @@
-import * as _ from 'lodash';
+import Messages from './messages';
+import './index.css';
 
 module As {
 
-  export function component (): any {
+  export function component(): HTMLDivElement {
     var element = document.createElement('div');
+    element.appendChild(getElement('', Messages.getStandardMessage()))
+    element.appendChild(getElement('hello css', Messages.getCssMessage()))
+    return element;
+  }
 
-    /* lodash is required for the next line to work */
-    element.innerHTML = _.join(['Hello','webpack', 'typescript'], ' ');
-
+  function getElement(className: string, content: string): HTMLDivElement {
+    const element = document.createElement('div');
+    element.className = className;
+    element.innerHTML = content;
     return element;
   }
 }
