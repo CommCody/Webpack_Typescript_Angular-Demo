@@ -1,6 +1,7 @@
 import Messages from './messages';
 import './index.css';
 import './index.scss';
+import './index.less';
 
 module As {
 
@@ -9,6 +10,7 @@ module As {
     element.appendChild(getElement('', Messages.getStandardMessage()))
     element.appendChild(getElement('hello css', Messages.getCssMessage()))
     element.appendChild(getElement('hello sass', Messages.getSassMessage()))
+    element.appendChild(getElement('hello less', Messages.getLessMessage()))
     return element;
   }
 

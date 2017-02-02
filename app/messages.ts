@@ -13,6 +13,10 @@ module Project {
         static getSassMessage(){
             return _.join(['Hello', 'webpack', 'typescript', 'sass', 2 ** 2], ' ');
         }
+
+        static getLessMessage(){
+            return _.join(['Hello', 'webpack', 'typescript', 'less', 2 ** 2], ' ');
+        }
     }
 }
 export default Project.Messages;
